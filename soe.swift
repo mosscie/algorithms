@@ -1,13 +1,13 @@
 func sieveOfEratosthenes(num: Int) -> [Int]{
-  var Arr = [Bool](count: num+1, repeatedValue: true)
-  Arr[0] = false
-  Arr[1] = false
+  var arr = [Bool](count: num+1, repeatedValue: true)
+  arr[0] = false
+  arr[1] = false
   for i in 2..<Int(sqrt(Double(num))){
-    if Arr[i] == true{
+    if arr[i] == true{
       for j in (i*i).stride(through: num, by: i){
-        A[j] = false
+        arr[j] = false
       }
     }
   }
-  return A.enumerate().filter({i,v in v == true}).map({i,v in i}
+  return arr.enumerate().filter({i,v in v == true}).map({i,v in i}
 }
