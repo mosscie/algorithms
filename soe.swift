@@ -9,5 +9,5 @@ func sieveOfEratosthenes(num: Int) -> [Int]{
       }
     }
   }
-  return arr.enumerate().filter({i,v in v == true}).map({i,v in i}
+  return arr.enumerate().filter({i,v in v == true}).map({i,v in i})
 }
